@@ -1,0 +1,20 @@
+
+
+!CONFIGURATION: 'Debug' (com.ti.ccstudio.buildDefinitions.C6000.Debug.1348820894) [Wed Jul 14 15:46:41 KST 2021]
+
+	!TOOL: 'C6000 Compiler' (com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1784089044)
+
+		!WARNING: Unresolved target-tool option 'com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.CODE_STATE'
+
+		!WARNING: Unresolved target-tool option 'com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.LITTLE_ENDIAN'
+
+
+
+!CONFIGURATION: 'Release' (com.ti.ccstudio.buildDefinitions.C6000.Release.1327300613) [Wed Jul 14 16:51:33 KST 2021]
+
+	!TOOL: 'C6000 Compiler' (com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerRelease.160770872)
+
+		!WARNING: Unresolved target-tool option 'com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.CODE_STATE'
+
+		!WARNING: Unresolved target-tool option 'com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.LITTLE_ENDIAN'
+
