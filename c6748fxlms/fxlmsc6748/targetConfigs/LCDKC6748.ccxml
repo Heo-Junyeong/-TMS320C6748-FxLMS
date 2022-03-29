@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+        
+    <configuration XML_version="1.2" id="configuration_0">
+                
+        <instance XML_version="1.2" desc="Texas Instruments XDS2xx USB Debug Probe" href="connections/TIXDS2XXUSB_Connection.xml" id="Texas Instruments XDS2xx USB Debug Probe" xml="TIXDS2XXUSB_Connection.xml" xmlpath="connections"/>
+                
+        <connection XML_version="1.2" id="Texas Instruments XDS2xx USB Debug Probe">
+                        
+            <instance XML_version="1.2" href="drivers/tixds560icepick_c.xml" id="drivers" xml="tixds560icepick_c.xml" xmlpath="drivers"/>
+                        
+            <instance XML_version="1.2" href="drivers/tixds560c674x.xml" id="drivers" xml="tixds560c674x.xml" xmlpath="drivers"/>
+                        
+            <instance XML_version="1.2" href="drivers/tixds560pru.xml" id="drivers" xml="tixds560pru.xml" xmlpath="drivers"/>
+                        
+            <platform XML_version="1.2" id="platform_0">
+                                
+                <instance XML_version="1.2" desc="LCDKC6748" href="boards/lcdkc6748.xml" id="LCDKC6748" xml="lcdkc6748.xml" xmlpath="boards"/>
+                            
+            </platform>
+                    
+        </connection>
+            
+    </configuration>
+    
+</configurations>

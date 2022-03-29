@@ -1,0 +1,676 @@
+******************************************************************************
+               TMS320C6x Linker PC v8.3.11                     
+******************************************************************************
+>> Linked Tue Mar 29 17:28:47 2022
+
+OUTPUT FILE NAME:   <fxlmsc6748.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 800058a0
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  DSPL2ROM              00700000   00100000  00000000  00100000  RWIX
+  DSPL2RAM              00800000   00040000  00000000  00040000  RWIX
+  DSPL1PRAM             00e00000   00008000  00000000  00008000  RWIX
+  DSPL1DRAM             00f00000   00008000  00000000  00008000  RWIX
+  SHDSPL2ROM            11700000   00100000  00000000  00100000  RWIX
+  SHDSPL2RAM            11800000   00040000  00000000  00040000  RWIX
+  SHDSPL1PRAM           11e00000   00008000  00000000  00008000  RWIX
+  SHDSPL1DRAM           11f00000   00008000  00000000  00008000  RWIX
+  EMIFACS0              40000000   20000000  00000000  20000000  RWIX
+  EMIFACS2              60000000   02000000  00000000  02000000  RWIX
+  EMIFACS3              62000000   02000000  00000000  02000000  RWIX
+  EMIFACS4              64000000   02000000  00000000  02000000  RWIX
+  EMIFACS5              66000000   02000000  00000000  02000000  RWIX
+  SHRAM                 80000000   00020000  0000680c  000197f4  RWIX
+  DDR2                  c0000000   20000000  00000000  20000000  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+80000000    80000000    00005aa0   00005aa0    r-x
+  80000000    80000000    00005aa0   00005aa0    r-x .text
+80005aa0    80005aa0    00000c18   00000000    rw-
+  80005aa0    80005aa0    00000800   00000000    rw- .stack
+  800062a0    800062a0    0000033c   00000000    rw- .far
+  800065e0    800065e0    000000d8   00000000    rw- .fardata
+800066b8    800066b8    0000005c   0000005c    r--
+  800066b8    800066b8    0000005c   0000005c    r-- .const
+80006714    80006714    00000024   00000000    rw-
+  80006714    80006714    0000001c   00000000    rw- .neardata
+  80006730    80006730    00000008   00000000    rw- .bss
+80006738    80006738    000000d8   000000d8    r--
+  80006738    80006738    000000d8   000000d8    r-- .cinit
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    80000000    00005aa0     
+                  80000000    000011a0     drivers.lib : edma.obj (.text)
+                  800011a0    000011a0     system_config.lib : interrupt.obj (.text:retain)
+                  80002340    00000a20     drivers.lib : mcasp.obj (.text)
+                  80002d60    00000a00     main.obj (.text)
+                  80003760    00000520     system_config.lib : interrupt.obj (.text)
+                  80003c80    00000480     aic31.obj (.text)
+                  80004100    00000440     codecif.obj (.text)
+                  80004540    00000300     rts6740_elf.lib : cos.c.obj (.text:cos)
+                  80004840    000002e0                     : sin.c.obj (.text:sin)
+                  80004b20    00000200     drivers.lib : i2c.obj (.text)
+                  80004d20    00000180                 : psc.obj (.text)
+                  80004ea0    00000100     rts6740_elf.lib : copy_decompress_rle.c.obj (.text:__TI_decompress_rle_core)
+                  80004fa0    00000060     platform.lib : i2c.obj (.text)
+                  80005000    00000200     system_config.lib : intvecs.obj (.text)
+                  80005200    000000e0     rts6740_elf.lib : exit.c.obj (.text:exit)
+                  800052e0    000000e0                     : memset.c.obj (.text:memset)
+                  800053c0    000000c0                     : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  80005480    000000c0                     : divu.asm.obj (.text:__divu)
+                  80005540    000000c0                     : modf.c.obj (.text:modf)
+                  80005600    000000c0                     : tls.c.obj (.text:tls:init:__TI_tls_init)
+                  800056c0    000000a0                     : round.c.obj (.text:__c6xabi_nround)
+                  80005760    000000a0                     : remu.asm.obj (.text:__remu)
+                  80005800    000000a0                     : memcpy64.asm.obj (.text:memcpy)
+                  800058a0    00000080                     : boot.c.obj (.text:_c_int00)
+                  80005920    00000060     platform.lib : mcasp.obj (.text)
+                  80005980    00000040     rts6740_elf.lib : args_main.c.obj (.text:_args_main)
+                  800059c0    00000020                     : trunc.c.obj (.text:__c6xabi_trunc)
+                  800059e0    00000020                     : startup.c.obj (.text:_system_post_cinit)
+                  80005a00    00000020                     : pre_init.c.obj (.text:_system_pre_init)
+                  80005a20    00000020                     : exit.c.obj (.text:abort)
+                  80005a40    00000020                     : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  80005a60    00000020                     : copy_decompress_rle.c.obj (.text:decompress:rle24:__TI_decompress_rle24)
+                  80005a80    00000020     platform.lib : edma.obj (.text)
+
+.stack     0    80005aa0    00000800     UNINITIALIZED
+                  80005aa0    00000008     rts6740_elf.lib : boot.c.obj (.stack)
+                  80005aa8    000007f8     --HOLE--
+
+.bss       0    80006730    00000008     UNINITIALIZED
+                  80006730    00000004     drivers.lib : edma.obj (.bss)
+                  80006734    00000004     (.common:savedBase)
+
+.const     0    800066b8    0000005c     
+                  800066b8    00000020     main.obj (.const:rxDefaultPar)
+                  800066d8    00000020     main.obj (.const:txDefaultPar)
+                  800066f8    0000000c     main.obj (.const:rxBufPtr)
+                  80006704    00000004     --HOLE-- [fill = 0]
+                  80006708    0000000c     main.obj (.const:txBufPtr)
+
+.far       0    800062a0    0000033c     UNINITIALIZED
+                  800062a0    00000240     system_config.lib : interrupt.obj (.far)
+                  800064e0    00000028     main.obj (.far:rxBuf0)
+                  80006508    00000028     main.obj (.far:rxBuf1)
+                  80006530    00000028     main.obj (.far:rxBuf2)
+                  80006558    00000028     main.obj (.far:txBuf0)
+                  80006580    00000028     main.obj (.far:txBuf1)
+                  800065a8    00000028     main.obj (.far:txBuf2)
+                  800065d0    0000000c     (.common:slaveData)
+
+.fardata   0    800065e0    000000d8     UNINITIALIZED
+                  800065e0    00000040     rts6740_elf.lib : cos.c.obj (.fardata:R$1)
+                  80006620    00000040                     : sin.c.obj (.fardata:R$1)
+                  80006660    00000028     main.obj (.fardata:loopBuf)
+                  80006688    00000024     main.obj (.fardata:refSignal)
+                  800066ac    0000000c     rts6740_elf.lib : exit.c.obj (.fardata)
+
+.cinit     0    80006738    000000d8     
+                  80006738    0000008a     (.cinit..fardata.load) [load image, compression = rle]
+                  800067c2    00000011     (.cinit..neardata.load) [load image, compression = rle]
+                  800067d3    0000000b     (.cinit..far.load) [load image, compression = rle]
+                  800067de    00000009     (.cinit..bss.load) [load image, compression = rle]
+                  800067e7    00000001     --HOLE-- [fill = 0]
+                  800067e8    00000008     (__TI_handler_table)
+                  800067f0    00000020     (__TI_cinit_table)
+
+.init_array 
+*          0    80000000    00000000     UNINITIALIZED
+
+.neardata 
+*          0    80006714    0000001c     UNINITIALIZED
+                  80006714    00000014     main.obj (.neardata)
+                  80006728    00000008     codecif.obj (.neardata)
+
+MODULE SUMMARY
+
+       Module                       code    ro data   rw data
+       ------                       ----    -------   -------
+    .\
+       main.obj                     2560    88        336    
+       aic31.obj                    1152    0         0      
+       codecif.obj                  1088    0         24     
+    +--+----------------------------+-------+---------+---------+
+       Total:                       4800    88        360    
+                                                             
+    C:/ti/C6748_StarterWare_1_20_04_01/binary/c674x/cgt_ccs/c6748/drivers/Release/drivers.lib
+       edma.obj                     4512    0         4      
+       mcasp.obj                    2592    0         0      
+       i2c.obj                      512     0         0      
+       psc.obj                      384     0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       8000    0         4      
+                                                             
+    C:/ti/C6748_StarterWare_1_20_04_01/binary/c674x/cgt_ccs/c6748/lcdkC6748/platform/Release/platform.lib
+       i2c.obj                      96      0         0      
+       mcasp.obj                    96      0         0      
+       edma.obj                     32      0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       224     0         0      
+                                                             
+    C:/ti/C6748_StarterWare_1_20_04_01/binary/c674x/cgt_ccs/c6748/system_config/Release/system_config.lib
+       interrupt.obj                5824    0         576    
+       intvecs.obj                  512     0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       6336    0         576    
+                                                             
+    C:\ti\ccs1110\ccs\tools\compiler\ti-cgt-c6000_8.3.11\lib\rts6740_elf.lib
+       cos.c.obj                    768     0         64     
+       sin.c.obj                    736     0         64     
+       copy_decompress_rle.c.obj    288     0         0      
+       exit.c.obj                   256     0         12     
+       memset.c.obj                 224     0         0      
+       autoinit.c.obj               192     0         0      
+       divu.asm.obj                 192     0         0      
+       modf.c.obj                   192     0         0      
+       tls.c.obj                    192     0         0      
+       memcpy64.asm.obj             160     0         0      
+       remu.asm.obj                 160     0         0      
+       round.c.obj                  160     0         0      
+       boot.c.obj                   128     0         0      
+       args_main.c.obj              64      0         0      
+       copy_decompress_none.c.obj   32      0         0      
+       pre_init.c.obj               32      0         0      
+       startup.c.obj                32      0         0      
+       trunc.c.obj                  32      0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       3840    0         140    
+                                                             
+       Stack:                       0       0         2048   
+       Linker Generated:            0       215       0      
+    +--+----------------------------+-------+---------+---------+
+       Grand Total:                 23200   303       3128   
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 800067f0 records: 4, size/record: 8, table size: 32
+	.fardata: load addr=80006738, load size=0000008a bytes, run addr=800065e0, run size=000000d8 bytes, compression=rle
+	.neardata: load addr=800067c2, load size=00000011 bytes, run addr=80006714, run size=0000001c bytes, compression=rle
+	.far: load addr=800067d3, load size=0000000b bytes, run addr=800062a0, run size=0000033c bytes, compression=rle
+	.bss: load addr=800067de, load size=00000009 bytes, run addr=80006730, run size=00000008 bytes, compression=rle
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 800067e8 records: 2, size/record: 4, table size: 8
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                           
+-------   ----                           
+80003fe0  AIC31ADCInit                   
+80004048  AIC31DACInit                   
+80003ca4  AIC31DataConfig                
+80003c80  AIC31Reset                     
+80003d50  AIC31SampleRateConfig          
+80005a20  C$$EXIT                        
+800044c0  CodecRegBitClr                 
+80004444  CodecRegBitSet                 
+800043f8  CodecRegRead                   
+800043b8  CodecRegWrite                  
+8000118c  EDMA3ChannelToParamMap         
+800010c0  EDMA3ClearErrorBits            
+80000cd0  EDMA3ClrCCErr                  
+800008d8  EDMA3ClrEvt                    
+80001074  EDMA3ClrIntr                   
+80000800  EDMA3ClrMissEvt                
+80000f10  EDMA3ContextRestore            
+80000db0  EDMA3ContextSave               
+80000ce0  EDMA3Deinit                    
+800009ec  EDMA3DisableChInShadowReg      
+8000086c  EDMA3DisableDmaEvt             
+80000a88  EDMA3DisableEvtIntr            
+800008b8  EDMA3DisableQdmaEvt            
+80000934  EDMA3DisableTransfer           
+80000160  EDMA3EnableChInShadowReg       
+80000ba0  EDMA3EnableDmaEvt              
+80000288  EDMA3EnableEvtIntr             
+80000bf8  EDMA3EnableQdmaEvt             
+80000c20  EDMA3EnableTransfer            
+80000b8c  EDMA3ErrIntrHighStatusGet      
+80000ae0  EDMA3FreeChannel               
+800007ec  EDMA3GetCCErrStatus            
+800007d8  EDMA3GetErrIntrStatus          
+800007c4  EDMA3GetIntrStatus             
+80000760  EDMA3GetPaRAM                  
+800005f4  EDMA3Init                      
+800005d8  EDMA3IntrStatusHighGet         
+80000200  EDMA3MapChToEvtQ               
+80000554  EDMA3MapQdmaChToPaRAM          
+8000054c  EDMA3PeripheralIdGet           
+80000510  EDMA3QdmaClrMissEvt            
+80000500  EDMA3QdmaGetErrIntrStatus      
+80000498  EDMA3QdmaGetPaRAM              
+80000478  EDMA3QdmaGetPaRAMEntry         
+80000408  EDMA3QdmaSetPaRAM              
+800003e4  EDMA3QdmaSetPaRAMEntry         
+800002e0  EDMA3RequestChannel            
+80000100  EDMA3SetEvt                    
+8000008c  EDMA3SetPaRAM                  
+80000068  EDMA3SetQdmaTrigWord           
+80000000  EDMA3UnmapChToEvtQ             
+80005a80  EDMAVersionGet                 
+80003c48  ExcCombineAdd                  
+80003c18  ExcCombineRemove               
+80003c00  ExcGlobalEnable                
+80004138  I2CCodecIfInit                 
+80004d0c  I2CDMARxEventDisable           
+80004cf8  I2CDMARxEventEnable            
+80004ce4  I2CDMATxEventDisable           
+80004ccc  I2CDMATxEventEnable            
+80004cc4  I2CDMATxRxEventDisable         
+80004cb8  I2CInterruptVectorGet          
+80004cac  I2CMasterBusBusy               
+80004c94  I2CMasterControl               
+80004c8c  I2CMasterDataGet               
+80004c88  I2CMasterDataPut               
+80004c74  I2CMasterDisable               
+80004c50  I2CMasterEnable                
+80004c44  I2CMasterErr                   
+80004bf0  I2CMasterInitExpClk            
+80004bec  I2CMasterIntClearEx            
+80004bd8  I2CMasterIntDisableEx          
+80004bc4  I2CMasterIntEnableEx           
+80004bb8  I2CMasterIntStatus             
+80004bac  I2CMasterIsBusy                
+80004ba8  I2CMasterSlaveAddrSet          
+80004b94  I2CMasterStart                 
+80004b84  I2CMasterStop                  
+80004b80  I2COwnAddressSet               
+80004fa0  I2CPinMuxSetup                 
+80004b78  I2CSetDataCount                
+80004b70  I2CSlaveAddressGet             
+80004b68  I2CSlaveDataGet                
+80004b64  I2CSlaveDataPut                
+80004b60  I2CSlaveIntClearEx             
+80004b4c  I2CSlaveIntDisableEx           
+80004b34  I2CSlaveIntEnableEx            
+80004b2c  I2CSlaveIntStatus              
+80004b24  I2CSlaveIntStatusEx            
+80004b20  I2CStatusClear                 
+80003bac  IntDSPINTCInit                 
+80003b88  IntDisable                     
+800039b0  IntEnable                      
+80003b68  IntEventClear                  
+80003b28  IntEventCombineAdd             
+800039d4  IntEventCombineInit            
+800039a0  IntEventCombineRegister        
+80003960  IntEventCombineRemove          
+80003908  IntEventMap                    
+800038e8  IntEventSet                    
+80003894  IntGlobalDisable               
+800038d8  IntGlobalEnable                
+800038a8  IntGlobalRestore               
+800038c8  IntRegister                    
+800038b0  IntReset                       
+80003878  IntUnRegister                  
+80002d20  McASPAMUTEINActivate           
+80002d0c  McASPAMuteDisable              
+80002cf8  McASPAMuteEnable               
+80002bcc  McASPContextRestore            
+80002aa0  McASPContextSave               
+80002a88  McASPPinDirInputSet            
+80002a74  McASPPinDirOutputSet           
+80002a60  McASPPinGPIOSet                
+80002a48  McASPPinMcASPSet               
+80005920  McASPPinMuxSetup               
+80002a28  McASPReadFifoEnable            
+80002a10  McASPRxBufRead                 
+800029a8  McASPRxClkCfg                  
+8000298c  McASPRxClkCheckConfig          
+80002968  McASPRxClkPolaritySet          
+800028d4  McASPRxClkStart                
+80002854  McASPRxEnable                  
+80002820  McASPRxFmtI2SSet               
+80002818  McASPRxFmtMaskSet              
+80002810  McASPRxFmtSet                  
+800027f8  McASPRxFrameSyncCfg            
+800027d8  McASPRxHFClkPolaritySet        
+800027c4  McASPRxIntDisable              
+800027ac  McASPRxIntEnable               
+800027a4  McASPRxReset                   
+8000274c  McASPRxSerActivate             
+80002740  McASPRxStatusGet               
+80002730  McASPRxTimeSlotSet             
+80002710  McASPSerializerInactivate      
+800026e8  McASPSerializerRxSet           
+800026b8  McASPSerializerTxSet           
+800026a8  McASPTxBufWrite                
+80002640  McASPTxClkCfg                  
+80002624  McASPTxClkCheckConfig          
+80002600  McASPTxClkPolaritySet          
+80002558  McASPTxClkStart                
+800024d0  McASPTxEnable                  
+80002498  McASPTxFmtI2SSet               
+8000248c  McASPTxFmtMaskSet              
+80002480  McASPTxFmtSet                  
+80002468  McASPTxFrameSyncCfg            
+80002444  McASPTxHFClkPolaritySet        
+8000242c  McASPTxIntDisable              
+80002414  McASPTxIntEnable               
+80002408  McASPTxReset                   
+800023f4  McASPTxRxClkSyncDisable        
+800023e4  McASPTxRxClkSyncEnable         
+80002384  McASPTxSerActivate             
+8000236c  McASPTxStatusGet               
+80002360  McASPTxTimeSlotSet             
+80002340  McASPWriteFifoEnable           
+80004d20  PSCModuleControl               
+800067f0  __TI_CINIT_Base                
+80006810  __TI_CINIT_Limit               
+800067e8  __TI_Handler_Table_Base        
+800067f0  __TI_Handler_Table_Limit       
+800062a0  __TI_STACK_END                 
+00000800  __TI_STACK_SIZE                
+80006714  __TI_STATIC_BASE               
+UNDEFED   __TI_TLS_INIT_Base             
+UNDEFED   __TI_TLS_INIT_Limit            
+800053c0  __TI_auto_init_nobinit_nopinit 
+800066ac  __TI_cleanup_ptr               
+80005a40  __TI_decompress_none           
+80005a60  __TI_decompress_rle24          
+800066b0  __TI_dtors_ptr                 
+800066b4  __TI_enable_exit_profile_output
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+80005600  __TI_tls_init                  
+ffffffff  __binit__                      
+80005480  __c6xabi_divu                  
+800056c0  __c6xabi_nround                
+80005760  __c6xabi_remu                  
+800056c0  __c6xabi_roundl                
+800059c0  __c6xabi_trunc                 
+800059c0  __c6xabi_truncl                
+ffffffff  __c_args__                     
+80005480  __divu                         
+80005760  __remu                         
+80005980  _args_main                     
+80002208  _c674x_mask_int10_isr          
+800020dc  _c674x_mask_int11_isr          
+80001fb0  _c674x_mask_int12_isr          
+80001e84  _c674x_mask_int13_isr          
+80001d58  _c674x_mask_int14_isr          
+80001c2c  _c674x_mask_int15_isr          
+80001b00  _c674x_mask_int4_isr           
+800019d4  _c674x_mask_int5_isr           
+800018a8  _c674x_mask_int6_isr           
+8000177c  _c674x_mask_int7_isr           
+80001650  _c674x_mask_int8_isr           
+80001524  _c674x_mask_int9_isr           
+800013f8  _c674x_nmi_isr                 
+800012cc  _c674x_rsvd_int2_isr           
+800011a0  _c674x_rsvd_int3_isr           
+800058a0  _c_int00                       
+80005000  _intcVectorTable               
+80005aa0  _stack                         
+800059e0  _system_post_cinit             
+80005a00  _system_pre_init               
+80005a20  abort                          
+ffffffff  binit                          
+80004540  cos                            
+80004540  cosl                           
+80006728  dataIdx                        
+80005200  exit                           
+80003558  main                           
+80005800  memcpy                         
+800052e0  memset                         
+80005540  modf                           
+80005540  modfl                          
+80006730  regionId                       
+80006734  savedBase                      
+80004840  sin                            
+80004840  sinl                           
+800065d0  slaveData                      
+8000672c  txCompFlag                     
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                           
+-------   ----                           
+00000800  __TI_STACK_SIZE                
+80000000  EDMA3UnmapChToEvtQ             
+80000068  EDMA3SetQdmaTrigWord           
+8000008c  EDMA3SetPaRAM                  
+80000100  EDMA3SetEvt                    
+80000160  EDMA3EnableChInShadowReg       
+80000200  EDMA3MapChToEvtQ               
+80000288  EDMA3EnableEvtIntr             
+800002e0  EDMA3RequestChannel            
+800003e4  EDMA3QdmaSetPaRAMEntry         
+80000408  EDMA3QdmaSetPaRAM              
+80000478  EDMA3QdmaGetPaRAMEntry         
+80000498  EDMA3QdmaGetPaRAM              
+80000500  EDMA3QdmaGetErrIntrStatus      
+80000510  EDMA3QdmaClrMissEvt            
+8000054c  EDMA3PeripheralIdGet           
+80000554  EDMA3MapQdmaChToPaRAM          
+800005d8  EDMA3IntrStatusHighGet         
+800005f4  EDMA3Init                      
+80000760  EDMA3GetPaRAM                  
+800007c4  EDMA3GetIntrStatus             
+800007d8  EDMA3GetErrIntrStatus          
+800007ec  EDMA3GetCCErrStatus            
+80000800  EDMA3ClrMissEvt                
+8000086c  EDMA3DisableDmaEvt             
+800008b8  EDMA3DisableQdmaEvt            
+800008d8  EDMA3ClrEvt                    
+80000934  EDMA3DisableTransfer           
+800009ec  EDMA3DisableChInShadowReg      
+80000a88  EDMA3DisableEvtIntr            
+80000ae0  EDMA3FreeChannel               
+80000b8c  EDMA3ErrIntrHighStatusGet      
+80000ba0  EDMA3EnableDmaEvt              
+80000bf8  EDMA3EnableQdmaEvt             
+80000c20  EDMA3EnableTransfer            
+80000cd0  EDMA3ClrCCErr                  
+80000ce0  EDMA3Deinit                    
+80000db0  EDMA3ContextSave               
+80000f10  EDMA3ContextRestore            
+80001074  EDMA3ClrIntr                   
+800010c0  EDMA3ClearErrorBits            
+8000118c  EDMA3ChannelToParamMap         
+800011a0  _c674x_rsvd_int3_isr           
+800012cc  _c674x_rsvd_int2_isr           
+800013f8  _c674x_nmi_isr                 
+80001524  _c674x_mask_int9_isr           
+80001650  _c674x_mask_int8_isr           
+8000177c  _c674x_mask_int7_isr           
+800018a8  _c674x_mask_int6_isr           
+800019d4  _c674x_mask_int5_isr           
+80001b00  _c674x_mask_int4_isr           
+80001c2c  _c674x_mask_int15_isr          
+80001d58  _c674x_mask_int14_isr          
+80001e84  _c674x_mask_int13_isr          
+80001fb0  _c674x_mask_int12_isr          
+800020dc  _c674x_mask_int11_isr          
+80002208  _c674x_mask_int10_isr          
+80002340  McASPWriteFifoEnable           
+80002360  McASPTxTimeSlotSet             
+8000236c  McASPTxStatusGet               
+80002384  McASPTxSerActivate             
+800023e4  McASPTxRxClkSyncEnable         
+800023f4  McASPTxRxClkSyncDisable        
+80002408  McASPTxReset                   
+80002414  McASPTxIntEnable               
+8000242c  McASPTxIntDisable              
+80002444  McASPTxHFClkPolaritySet        
+80002468  McASPTxFrameSyncCfg            
+80002480  McASPTxFmtSet                  
+8000248c  McASPTxFmtMaskSet              
+80002498  McASPTxFmtI2SSet               
+800024d0  McASPTxEnable                  
+80002558  McASPTxClkStart                
+80002600  McASPTxClkPolaritySet          
+80002624  McASPTxClkCheckConfig          
+80002640  McASPTxClkCfg                  
+800026a8  McASPTxBufWrite                
+800026b8  McASPSerializerTxSet           
+800026e8  McASPSerializerRxSet           
+80002710  McASPSerializerInactivate      
+80002730  McASPRxTimeSlotSet             
+80002740  McASPRxStatusGet               
+8000274c  McASPRxSerActivate             
+800027a4  McASPRxReset                   
+800027ac  McASPRxIntEnable               
+800027c4  McASPRxIntDisable              
+800027d8  McASPRxHFClkPolaritySet        
+800027f8  McASPRxFrameSyncCfg            
+80002810  McASPRxFmtSet                  
+80002818  McASPRxFmtMaskSet              
+80002820  McASPRxFmtI2SSet               
+80002854  McASPRxEnable                  
+800028d4  McASPRxClkStart                
+80002968  McASPRxClkPolaritySet          
+8000298c  McASPRxClkCheckConfig          
+800029a8  McASPRxClkCfg                  
+80002a10  McASPRxBufRead                 
+80002a28  McASPReadFifoEnable            
+80002a48  McASPPinMcASPSet               
+80002a60  McASPPinGPIOSet                
+80002a74  McASPPinDirOutputSet           
+80002a88  McASPPinDirInputSet            
+80002aa0  McASPContextSave               
+80002bcc  McASPContextRestore            
+80002cf8  McASPAMuteEnable               
+80002d0c  McASPAMuteDisable              
+80002d20  McASPAMUTEINActivate           
+80003558  main                           
+80003878  IntUnRegister                  
+80003894  IntGlobalDisable               
+800038a8  IntGlobalRestore               
+800038b0  IntReset                       
+800038c8  IntRegister                    
+800038d8  IntGlobalEnable                
+800038e8  IntEventSet                    
+80003908  IntEventMap                    
+80003960  IntEventCombineRemove          
+800039a0  IntEventCombineRegister        
+800039b0  IntEnable                      
+800039d4  IntEventCombineInit            
+80003b28  IntEventCombineAdd             
+80003b68  IntEventClear                  
+80003b88  IntDisable                     
+80003bac  IntDSPINTCInit                 
+80003c00  ExcGlobalEnable                
+80003c18  ExcCombineRemove               
+80003c48  ExcCombineAdd                  
+80003c80  AIC31Reset                     
+80003ca4  AIC31DataConfig                
+80003d50  AIC31SampleRateConfig          
+80003fe0  AIC31ADCInit                   
+80004048  AIC31DACInit                   
+80004138  I2CCodecIfInit                 
+800043b8  CodecRegWrite                  
+800043f8  CodecRegRead                   
+80004444  CodecRegBitSet                 
+800044c0  CodecRegBitClr                 
+80004540  cos                            
+80004540  cosl                           
+80004840  sin                            
+80004840  sinl                           
+80004b20  I2CStatusClear                 
+80004b24  I2CSlaveIntStatusEx            
+80004b2c  I2CSlaveIntStatus              
+80004b34  I2CSlaveIntEnableEx            
+80004b4c  I2CSlaveIntDisableEx           
+80004b60  I2CSlaveIntClearEx             
+80004b64  I2CSlaveDataPut                
+80004b68  I2CSlaveDataGet                
+80004b70  I2CSlaveAddressGet             
+80004b78  I2CSetDataCount                
+80004b80  I2COwnAddressSet               
+80004b84  I2CMasterStop                  
+80004b94  I2CMasterStart                 
+80004ba8  I2CMasterSlaveAddrSet          
+80004bac  I2CMasterIsBusy                
+80004bb8  I2CMasterIntStatus             
+80004bc4  I2CMasterIntEnableEx           
+80004bd8  I2CMasterIntDisableEx          
+80004bec  I2CMasterIntClearEx            
+80004bf0  I2CMasterInitExpClk            
+80004c44  I2CMasterErr                   
+80004c50  I2CMasterEnable                
+80004c74  I2CMasterDisable               
+80004c88  I2CMasterDataPut               
+80004c8c  I2CMasterDataGet               
+80004c94  I2CMasterControl               
+80004cac  I2CMasterBusBusy               
+80004cb8  I2CInterruptVectorGet          
+80004cc4  I2CDMATxRxEventDisable         
+80004ccc  I2CDMATxEventEnable            
+80004ce4  I2CDMATxEventDisable           
+80004cf8  I2CDMARxEventEnable            
+80004d0c  I2CDMARxEventDisable           
+80004d20  PSCModuleControl               
+80004fa0  I2CPinMuxSetup                 
+80005000  _intcVectorTable               
+80005200  exit                           
+800052e0  memset                         
+800053c0  __TI_auto_init_nobinit_nopinit 
+80005480  __c6xabi_divu                  
+80005480  __divu                         
+80005540  modf                           
+80005540  modfl                          
+80005600  __TI_tls_init                  
+800056c0  __c6xabi_nround                
+800056c0  __c6xabi_roundl                
+80005760  __c6xabi_remu                  
+80005760  __remu                         
+80005800  memcpy                         
+800058a0  _c_int00                       
+80005920  McASPPinMuxSetup               
+80005980  _args_main                     
+800059c0  __c6xabi_trunc                 
+800059c0  __c6xabi_truncl                
+800059e0  _system_post_cinit             
+80005a00  _system_pre_init               
+80005a20  C$$EXIT                        
+80005a20  abort                          
+80005a40  __TI_decompress_none           
+80005a60  __TI_decompress_rle24          
+80005a80  EDMAVersionGet                 
+80005aa0  _stack                         
+800062a0  __TI_STACK_END                 
+800065d0  slaveData                      
+800066ac  __TI_cleanup_ptr               
+800066b0  __TI_dtors_ptr                 
+800066b4  __TI_enable_exit_profile_output
+80006714  __TI_STATIC_BASE               
+80006728  dataIdx                        
+8000672c  txCompFlag                     
+80006730  regionId                       
+80006734  savedBase                      
+800067e8  __TI_Handler_Table_Base        
+800067f0  __TI_CINIT_Base                
+800067f0  __TI_Handler_Table_Limit       
+80006810  __TI_CINIT_Limit               
+ffffffff  __TI_pprof_out_hndl            
+ffffffff  __TI_prof_data_size            
+ffffffff  __TI_prof_data_start           
+ffffffff  __binit__                      
+ffffffff  __c_args__                     
+ffffffff  binit                          
+UNDEFED   __TI_TLS_INIT_Base             
+UNDEFED   __TI_TLS_INIT_Limit            
+
+[225 symbols]
